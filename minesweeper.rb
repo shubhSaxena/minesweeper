@@ -23,6 +23,7 @@ class Minesweeper < Board
   end
 
   def display_hidden
+    puts "-----minesweeper board-----"
     @size.times do |i|
       @size.times do |j|
         if @revealed[i][j]
@@ -38,11 +39,12 @@ class Minesweeper < Board
   end
 
   def start
-    puts "Options to play - "
-    puts "1. open a tile - o(x,y)"
-    puts "2. flag a tile - f(x,y)"
-    puts "3. exit game and get answer - type exit"
+    display_hidden
     while(@status == "RUNNING")
+      puts "Options to play - "
+      puts "1. open a tile - o(x,y)"
+      puts "2. flag a tile - f(x,y)"
+      puts "3. exit game and get answer - type exit"
       puts "Enter the option: "
       option = gets.chomp
       if (option == "exit".downcase)
