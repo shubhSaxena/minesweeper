@@ -15,8 +15,7 @@ class Minesweeper < Board
   def display_revealed
     @size.times do |i|
       @size.times do |j|
-        x = @setup[i][j]
-        print x
+        print @setup[i][j]
       end
       puts "\n"
     end
